@@ -48,6 +48,10 @@ header nav ul {
     color: #F8ECC2;
 }
 
+p {
+    line-height: 3;
+   }
+   
 @media screen and (max-width:900px) {
     .menu-trigger {
         display: block;
