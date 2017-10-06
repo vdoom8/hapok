@@ -10,35 +10,29 @@ $(document).ready(function() {
     });
 });
 
-
-
-
-
-
-
-$(function(){
-    $('form input[type=submit]').click(function(e){
+$(function() {
+    $('form input[type=submit]').click(function(e) {
         const form = $('form')[0];
-        if(!form.checkValidity()){
-             return;
+        if (!form.checkValidity()) {
+            return;
         }
         e.preventDefault();
-         $.ajax({
+        $.ajax({
             url: 'https://formspree.io/v.doomich@gmail.com',
             method: 'POST',
-            data: { 
+            data: {
                 personName: $('#name').val(),
                 personEmail: $('#email').val(),
                 message: $('#message').val()
             },
             dataType: 'json'
-        }).done(function(){
+        }).done(function() {
             form.reset();
             $('#message-box').html('Дякуємо, ми зв&#39;яжемось з вами найближчим часом!');
         }).fail(function() {
             $('#message-box').html('Error');
         });
     });
-    
-    
+
+
 });
