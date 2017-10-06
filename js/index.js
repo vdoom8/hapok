@@ -34,7 +34,7 @@ $(function(){
             dataType: 'json'
         }).done(function(){
             form.reset();
-            $('#message-box').html('Дякуємо, ми звяжемось з вами найближчим часом!');
+            $('#message-box').html('Дякуємо, ми зв&#39;яжемось з вами найближчим часом!');
         }).fail(function() {
             $('#message-box').html('Error');
         });
